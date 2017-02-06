@@ -1,0 +1,25 @@
+##Plotting mitochondrial genomes with a fasta of your genome, MITOS server, and CIRCOS plotting app
+##Seqkit is also required.  
+
+##To add features, you have to add them to your bed file.  See below for an example.  
+##The "AT-rich" and "IGNOREME" plotting parameters (colored, has text, doesn't have text etc) are in plots.conf
+
+#Photinus_pyralis_mito_genome_v4    15000   16079   AT-rich 0.0     +
+#Photinus_pyralis_mito_genome_v4    0       200     IGNOREME        0.0     +
+
+GENOME=../mitochondrial_v4_MITOS/Photinus_pyralis_mito_genome_v4.fa
+BEDFILE=../mitochondrial_v4_MITOS/Photinuspyralismitogenomev4.bed.txt
+NAME=Photinus_pyralis_mito_genome_v4
+
+/lab/solexa_weng/testtube/seqkit stat $GENOME
+GENOME_LENGTH=$(/lab/solexa_weng/testtube/seqkit stat $GENOME | grep FASTA | tr -s " " | cut -d " " -f 5 | tr -d ",")
+GENOME_LENGTH=$(expr $GENOME_LENGTH - 1)
+
+echo "chr1 - mito mito 0 $GENOME_LENGTH black" > mitochondrial_genome.txt
+
+cat $BEDFILE | sed "s/$NAME/mito/g" | cut -f 1,2,3,4 > Mitochondrial_elements.txt
+cat $BEDFILE | sed "s/$NAME/mito/g" | cut -f 1,2,3,4 | grep -v "IGNOREME" | grep -v "trn" > no_tRNA_Mitochondrial_elements.txt
+cat $BEDFILE | sed "s/$NAME/mito/g" | cut -f 1,2,3,4 | grep -v "IGNOREME" | grep "trn" > yes_tRNA_Mitochondrial_elements.txt
+
+##Circos needs the various *.conf files in the same directory.
+circos
