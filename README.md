@@ -28,7 +28,7 @@ The "AT-rich" and "IGNOREME" plotting parameters (colored, has text, doesn't hav
 
 4) Edit the used_commands.txt Bash script to point to the appropriate files.
 
-5) Run the used_commands script, from the directory with the ./*.conf files
+5) Run the used_commands.txt Bash script, from the directory with the ./*.conf files
 
 6) You may need to edit the various ./*.conf files to get the figure looking how you want it to.  See the CIRCOS documentation.
 
