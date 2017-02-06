@@ -25,6 +25,10 @@ The "AT-rich" and "IGNOREME" have particular plotting parameters (colored, has t
 
 - <code>Photinus_pyralis_mito_genome_v4 15000 16079 AT-rich 0.0 +</code>
 - <code>Photinus_pyralis_mito_genome_v4 0 200 IGNOREME  0.0 +</code>
+- <code>Photinus_pyralis_mito_genome_v4	2764	3707	TRU	0	+</code>
+- <code>Photinus_pyralis_mito_genome_v4	2764	2839	IGNOREME	0	+</code>
+- <code>Photinus_pyralis_mito_genome_v4	2840  2915  IGNOREME	0	+</code>
+- <code>...</code>
 
 4) Edit the used_commands.txt Bash script to point to the appropriate files.
 
