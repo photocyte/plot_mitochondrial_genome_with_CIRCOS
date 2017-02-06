@@ -18,13 +18,13 @@ In my experience, mapping Illumina short reads to a phylogenetically related mit
 
 Bernt, M., Donath, A., Jühling, F., Externbrink, F., Florentz, C., Fritzsch, G., Pütz, J., Middendorf, M., and Stadler, P.F. (2013). MITOS: Improved de novo metazoan mitochondrial genome annotation. Molecular Phylogenetics and Evolution 69, 313–319.
 
-3) Add minor annotation.  Here is an example:
+3) Append annotation to the BED file for the features that MITOS doesn't support.  Here is an example:
 
-To add features, you have to add them to your bed file.  See below for an example.  
+To add features (such as the AT-rich region), you have to add them to your bed file.  See below for an example.  
 The "AT-rich" and "IGNOREME" plotting parameters (colored, has text, doesn't have text etc) are in plots.conf
 
-<code>Photinus_pyralis_mito_genome_v4    15000   16079   AT-rich 0.0     +</code>
-<code>Photinus_pyralis_mito_genome_v4    0       200     IGNOREME        0.0     +</code>
+<code>mito    15000   16079   AT-rich 0.0     +</code>
+<code>mito    0       200     IGNOREME        0.0     +</code>
 
 4) Edit the used_commands.txt Bash script to point to the appropriate files.
 
