@@ -21,7 +21,7 @@ Bernt, M., Donath, A., Jühling, F., Externbrink, F., Florentz, C., Fritzsch, G.
 3) Append annotation to the BED file for the features that MITOS doesn't support.  Here is an example:
 
 To add features (such as the AT-rich region), you have to add them to your bed file.  See below for an example.  
-The "AT-rich" and "IGNOREME" plotting parameters (colored, has text, doesn't have text etc) are in plots.conf
+The "AT-rich" and "IGNOREME" have particular plotting parameters (colored, has text, doesn't have text etc) that are setup in plots.conf
 
 - <code>mito    15000   16079   AT-rich 0.0     +</code>
 - <code>mito    0       200     IGNOREME        0.0     +</code>
