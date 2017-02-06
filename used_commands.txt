@@ -1,3 +1,5 @@
+#! /bin/bash
+
 ##Plotting mitochondrial genomes with a fasta of your genome, MITOS server, and CIRCOS plotting app
 ##Seqkit is also required.  
 
