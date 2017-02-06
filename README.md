@@ -23,8 +23,8 @@ Bernt, M., Donath, A., Jühling, F., Externbrink, F., Florentz, C., Fritzsch, G.
 To add features (such as the AT-rich region), you have to add them to your bed file.  See below for an example.  
 The "AT-rich" and "IGNOREME" have particular plotting parameters (colored, has text, doesn't have text etc) that are setup in plots.conf
 
-- <code>mito    15000   16079   AT-rich 0.0     +</code>
-- <code>mito    0       200     IGNOREME        0.0     +</code>
+- <code>Photinus_pyralis_mito_genome_v4 15000 16079 AT-rich 0.0 +</code>
+- <code>Photinus_pyralis_mito_genome_v4 0 200 IGNOREME  0.0 +</code>
 
 4) Edit the used_commands.txt Bash script to point to the appropriate files.
 
