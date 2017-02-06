@@ -25,4 +25,4 @@ Bernt, M., Donath, A., Jühling, F., Externbrink, F., Florentz, C., Fritzsch, G.
 5) You may need to edit the various ./*.conf files to get the figure looking how you want it to.  See the CIRCOS documentation.
 
 
-![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt tag](https://github.com/photocyte/plot_mitochondrial_genome_with_CIRCOS/blob/master/output_example.png)
