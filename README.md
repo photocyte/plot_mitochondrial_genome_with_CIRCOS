@@ -4,6 +4,7 @@ This is a set of hacky scripts which goes from mitochondrial FASTA + annotation 
 If you have annotation in BED format for another type of circular genome, this should work with relatively minor modifications.
 
 Software dependencies:
+
 1. CIRCOS (http://circos.ca)
 2. Seqkit (https://github.com/shenwei356/seqkit) 
 
