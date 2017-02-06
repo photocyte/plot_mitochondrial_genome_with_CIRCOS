@@ -1,14 +1,22 @@
 # plot_mitochondrial_with_circos
-This is a set of hacky scripts which goes from mitochondrial FASTA + annotation from MITOS, to figure using the CIRCOS plotting tool.
+This is a set of hacky scripts which goes from mitochondrial FASTA + annotation from MITOS in BED format, to a .svg figure using the CIRCOS plotting tool.
 
-You need:
+Software dependencies:
+1. CIRCOS: http://circos.ca
+2. Seqkit: https://github.com/shenwei356/seqkit
 
-1) A mitochondrial genome in FASTA format
+Data dependencies / workflow:
 
-In my experience, mapping Illumina short reads to a phylogenetically related mitochondrial genome, and assembling with SPAdes, works decently.  Your mileage may vary.  Here is my one-liner that does it.
+1) Get a mitochondrial genome in FASTA format
+
+In my experience, mapping Illumina short reads to a phylogenetically related mitochondrial genome, and assembling with SPAdes works decently.  Your mileage may vary.  If the assembly is roughly the right size, I'll go in with Bandage (https://rrwick.github.io/Bandage/), and pick the path around the circular assembly that is best supported by the coverage.
 
 2) Annotate that mitochondrial genome with the MITOS mitochondrial annotation server http://mitos.bioinf.uni-leipzig.de/index.py
 
 Bernt, M., Donath, A., Jühling, F., Externbrink, F., Florentz, C., Fritzsch, G., Pütz, J., Middendorf, M., and Stadler, P.F. (2013). MITOS: Improved de novo metazoan mitochondrial genome annotation. Molecular Phylogenetics and Evolution 69, 313–319.
 
-   
+3) Edit the used_commands.txt Bash script to point to the appropriate files.
+
+4) Run the used_commands script, from the directory with the ./*.conf files
+
+5) You may need to edit the various ./*.conf files to get the figure looking how you want it to.
