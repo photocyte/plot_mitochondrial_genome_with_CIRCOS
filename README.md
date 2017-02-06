@@ -23,3 +23,6 @@ Bernt, M., Donath, A., Jühling, F., Externbrink, F., Florentz, C., Fritzsch, G.
 4) Run the used_commands script, from the directory with the ./*.conf files
 
 5) You may need to edit the various ./*.conf files to get the figure looking how you want it to.  See the CIRCOS documentation.
+
+
+![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
