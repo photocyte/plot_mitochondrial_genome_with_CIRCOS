@@ -20,11 +20,11 @@ Bernt, M., Donath, A., Jühling, F., Externbrink, F., Florentz, C., Fritzsch, G.
 
 3) Add minor annotation.  Here is an example:
 
-##To add features, you have to add them to your bed file.  See below for an example.  
-##The "AT-rich" and "IGNOREME" plotting parameters (colored, has text, doesn't have text etc) are in plots.conf
+To add features, you have to add them to your bed file.  See below for an example.  
+The "AT-rich" and "IGNOREME" plotting parameters (colored, has text, doesn't have text etc) are in plots.conf
 
-#Photinus_pyralis_mito_genome_v4    15000   16079   AT-rich 0.0     +
-#Photinus_pyralis_mito_genome_v4    0       200     IGNOREME        0.0     +
+<code>Photinus_pyralis_mito_genome_v4    15000   16079   AT-rich 0.0     +</code>
+<code>Photinus_pyralis_mito_genome_v4    0       200     IGNOREME        0.0     +</code>
 
 4) Edit the used_commands.txt Bash script to point to the appropriate files.
 
