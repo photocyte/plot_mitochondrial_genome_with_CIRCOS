@@ -2,9 +2,17 @@
 
 ##Plotting mitochondrial genomes with a fasta of your genome, MITOS server, and CIRCOS plotting app
 
-GENOME=../mitochondrial_v4_MITOS/Photinus_pyralis_mito_genome_v4.fa
+GENOME=../MITOS_mitochondrial_annotation/Ellychia_corrusca_mito_genome_v2.fa
 BEDFILE=../mitochondrial_v4_MITOS/Photinuspyralismitogenomev4.bed.txt
 NAME=Photinus_pyralis_mito_genome_v4 ##Name has to match whats in the 1st column of the BED file.
+
+##Check if the FASTA newlines are DOS.  This screwed up some software for me at least once.
+doslines=$(hexdump -C $GENOME | grep "0d 0a" | wc -l)
+if [ $doslines -gt '0' ]
+then
+echo "FASTA was in DOS format (CRLF).  Converting to UNIX format."
+fromdos $GENOME
+fi
 
 ##Figure out how long the mitochondrial genome is
 /lab/solexa_weng/testtube/seqkit stat $GENOME
