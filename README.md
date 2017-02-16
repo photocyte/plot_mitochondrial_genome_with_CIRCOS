@@ -1,5 +1,5 @@
 # plot_mitochondrial_with_circos
-This is a set of hacky scripts which goes takes a mitochondrial FASTA + annotation from MITOS in BED format, to a .svg figure using the CIRCOS plotting tool.
+This is a set of hacky scripts which takes a mitochondrial FASTA + annotation from MITOS in BED format, and produces a .svg figure using the CIRCOS plotting tool.
 
 If you have annotation in BED format for another type of circular genome, this should work with relatively minor modifications.
 
