@@ -2,9 +2,9 @@
 
 ##Plotting mitochondrial genomes with a fasta of your genome, MITOS server, and CIRCOS plotting app
 
-GENOME=../MITOS_mitochondrial_annotation/Ellychia_corrusca_mito_genome_v2.fa
-BEDFILE=../mitochondrial_v4_MITOS/Photinuspyralismitogenomev4.bed.txt
-NAME=Photinus_pyralis_mito_genome_v4 ##Name has to match whats in the 1st column of the BED file.
+GENOME=../Photinus_pyralis_mito_genome_final_8369-genotype.fasta
+BEDFILE=../Ppyr_mitos2_8369_again/Ppyr_mito_8369_again.bed.txt
+NAME=Photinus_pyralis_mito_genome_final_8369-genotype ##Name has to match whats in the 1st column of the BED file.
 
 ##Check if the FASTA newlines are DOS.  This screwed up some software for me at least once.
 doslines=$(hexdump -C $GENOME | grep "0d 0a" | wc -l)
@@ -21,9 +21,9 @@ GENOME_LENGTH=$(expr $GENOME_LENGTH - 1)
 
 echo "chr1 - mito mito 0 $GENOME_LENGTH black" > mitochondrial_genome.txt
 
-cat $BEDFILE | sed "s/$NAME/mito/g" | cut -f 1,2,3,4 > Mitochondrial_elements.txt
-cat $BEDFILE | sed "s/$NAME/mito/g" | cut -f 1,2,3,4 | grep -v "IGNOREME" | grep -v "trn" > no_tRNA_Mitochondrial_elements.txt
-cat $BEDFILE | sed "s/$NAME/mito/g" | cut -f 1,2,3,4 | grep -v "IGNOREME" | grep "trn" > yes_tRNA_Mitochondrial_elements.txt
+cat $BEDFILE | sed "s/$NAME/mito/g" | sed "s/repeat_unit/IGNOREME/g" | cut -f 1,2,3,4 > Mitochondrial_elements.txt
+cat Mitochondrial_elements.txt | grep -v "IGNOREME" | grep -v "trn" > no_tRNA_Mitochondrial_elements.txt
+cat Mitochondrial_elements.txt | grep -v "IGNOREME" | grep "trn" > yes_tRNA_Mitochondrial_elements.txt
 
 ##Circos needs the various *.conf files in the same directory.
 circos
