@@ -2,9 +2,9 @@
 
 ##Plotting mitochondrial genomes with a fasta of your genome, MITOS server, and CIRCOS plotting app
 
-GENOME=../Photinus_pyralis_mito_genome_final_8369-genotype.fasta
-BEDFILE=../Ppyr_mitos2_8369_again/Ppyr_mito_8369_again.bed.txt
-NAME=Photinus_pyralis_mito_genome_final_8369-genotype ##Name has to match whats in the 1st column of the BED file.
+GENOME=../../Vargula_tsujii_mtDNA_v2_TRF.fasta
+BEDFILE=../MITOS2/Vargula_tsujii_mtDNA_v2.bed.txt
+NAME=Vargula_tsujii_mtDNA_v2_TRF ##Name has to match whats in the 1st column of the BED file.
 
 ##Check if the FASTA newlines are DOS.  This screwed up some software for me at least once.
 doslines=$(hexdump -C $GENOME | grep "0d 0a" | wc -l)
